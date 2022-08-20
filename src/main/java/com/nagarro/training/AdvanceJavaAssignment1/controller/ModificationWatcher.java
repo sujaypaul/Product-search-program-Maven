@@ -4,7 +4,7 @@ import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardWatchEventKinds;
-import java.nio.file.WatchEvent;
+//import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.util.HashMap;
@@ -35,15 +35,15 @@ public class ModificationWatcher {
 				watchKey = service.take();
 //				Path eventDir = keyMap.get(watchKey);
 				
-				for(WatchEvent<?> event: watchKey.pollEvents()) {
+//				for(WatchEvent<?> event: watchKey.pollEvents()) {
 //					WatchEvent.Kind<?> kind = event.kind();
 //					Path eventPath = (Path)event.context();
 //					System.out.println(eventDir + " : " + kind + " : " + eventPath);
 					
-					if(event!=null)
+					if(watchKey.pollEvents().get(0)!=null)
 					TshirtSearchOp.allTshirtData = TshirtCsvFileReader.getAllTshirts();
 
-				}
+//				}
 				
 			} while (watchKey.reset());
 			
