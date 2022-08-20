@@ -12,12 +12,14 @@ import com.nagarro.training.AdvanceJavaAssignment1.model.Tshirt;
 
 public class TshirtSearchOp {
 	
+	ArrayList<Tshirt>tshirt = new ArrayList<Tshirt>();
+	public static HashSet<Tshirt>allTshirtData = TshirtCsvFileReader.getAllTshirts();
+	
 	Scanner scn;
 	
 	public ArrayList<Tshirt>getMatchingTshirts(TshirtSearchIp tshirtsSerachIp) throws FileNotFoundException{
 		 
-		ArrayList<Tshirt>tshirt = new ArrayList<Tshirt>();
-		HashSet<Tshirt>allTshirtData = TshirtCsvFileReader.getAllTshirts();
+		
 		
 		String inputFormat = String.format("%s,%s,%s", tshirtsSerachIp.getColor(),tshirtsSerachIp.getSize(),tshirtsSerachIp.getGender());
 		
