@@ -11,8 +11,9 @@ import java.util.HashMap;
 //import java.util.HashSet;
 import java.util.Map;
 
+import com.nagarro.training.AdvanceJavaAssignment1.model.Data;
 //import com.nagarro.training.AdvanceJavaAssignment1.model.Tshirt;
-import com.nagarro.training.AdvanceJavaAssignment1.utility.TshirtSearchOp;
+//import com.nagarro.training.AdvanceJavaAssignment1.utility.TshirtSearchOp;
 
 public class ModificationWatcher {
 
@@ -41,7 +42,7 @@ public class ModificationWatcher {
 //					System.out.println(eventDir + " : " + kind + " : " + eventPath);
 					
 					if(watchKey.pollEvents().get(0)!=null)
-					TshirtSearchOp.allTshirtData = TshirtCsvFileReader.getAllTshirts();
+					Data.allTshirtData = TshirtCsvFileReader.getAllTshirts();
 
 //				}
 				

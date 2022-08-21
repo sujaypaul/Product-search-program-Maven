@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 //import com.nagarro.training.AdvanceJavaAssignment1.controller.ModificationWatcher;
 import com.nagarro.training.AdvanceJavaAssignment1.controller.Track;
+import com.nagarro.training.AdvanceJavaAssignment1.model.Data;
 import com.nagarro.training.AdvanceJavaAssignment1.model.Tshirt;
 import com.nagarro.training.AdvanceJavaAssignment1.utility.TshirtSearchIp;
 import com.nagarro.training.AdvanceJavaAssignment1.utility.TshirtSearchOp;
@@ -23,6 +24,8 @@ public class App {
 		Track obj1 = new Track();
 		Thread t = new Thread(obj1);
 		t.start();
+		
+		Data.fetchData();
 
 		do {
 			

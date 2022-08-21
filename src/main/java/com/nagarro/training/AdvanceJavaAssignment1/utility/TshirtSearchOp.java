@@ -4,16 +4,16 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
+//import java.util.HashSet;
 
 import com.nagarro.training.AdvanceJavaAssignment1.comparator.*;
-import com.nagarro.training.AdvanceJavaAssignment1.controller.TshirtCsvFileReader;
+//import com.nagarro.training.AdvanceJavaAssignment1.controller.TshirtCsvFileReader;
+import com.nagarro.training.AdvanceJavaAssignment1.model.Data;
 import com.nagarro.training.AdvanceJavaAssignment1.model.Tshirt;
 
 public class TshirtSearchOp {
 	
 	ArrayList<Tshirt>tshirt = new ArrayList<Tshirt>();
-	public static HashSet<Tshirt>allTshirtData = TshirtCsvFileReader.getAllTshirts();
 	
 	Scanner scn;
 	
@@ -28,7 +28,7 @@ public class TshirtSearchOp {
 		
 		System.out.println("Your choice of Output Preference is : ");
 		
-		for(Tshirt allTshirtDataiterator : allTshirtData) {
+		for(Tshirt allTshirtDataiterator : Data.allTshirtData) {
 			
 			outputFormat = String.format("%s,%s,%s", allTshirtDataiterator.getColor(),allTshirtDataiterator.getSize(),allTshirtDataiterator.getGender());
 			
